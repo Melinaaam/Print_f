@@ -6,11 +6,11 @@
 /*   By: memotyle <memotyle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/14 17:46:41 by memotyle          #+#    #+#             */
-/*   Updated: 2024/06/14 18:01:00 by memotyle         ###   ########.fr       */
+/*   Updated: 2024/06/17 09:51:15 by memotyle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 int	ft_putnbr(int n)
 {

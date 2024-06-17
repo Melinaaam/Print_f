@@ -6,11 +6,11 @@
 /*   By: memotyle <memotyle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/14 18:09:11 by memotyle          #+#    #+#             */
-/*   Updated: 2024/06/14 18:12:18 by memotyle         ###   ########.fr       */
+/*   Updated: 2024/06/17 09:51:28 by memotyle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 int	ft_strlen(char *s)
 {

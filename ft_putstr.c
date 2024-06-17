@@ -6,17 +6,19 @@
 /*   By: memotyle <memotyle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/14 17:02:37 by memotyle          #+#    #+#             */
-/*   Updated: 2024/06/14 17:44:50 by memotyle         ###   ########.fr       */
+/*   Updated: 2024/06/17 09:58:49 by memotyle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 int	ft_putstr(char *s)
 {
 	int	i;
 
 	i = 0;
+	if (!s)
+		return (ft_putstr("(null)"));
 	while (s[i])
 		i++;
 	write(1, s, i);
