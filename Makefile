@@ -27,8 +27,8 @@ clean:
 		rm -f ${OBJS}
 
 fclean : clean
-		rm -f all
+		rm -f ${NAME}
 
-#re : fclean all
+re : fclean all
 
 .PHONY: all clean fclean re

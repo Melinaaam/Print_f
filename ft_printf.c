@@ -6,7 +6,7 @@
 /*   By: memotyle <memotyle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/14 11:38:49 by memotyle          #+#    #+#             */
-/*   Updated: 2024/06/17 09:48:58 by memotyle         ###   ########.fr       */
+/*   Updated: 2024/06/18 15:04:40 by memotyle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,12 +59,12 @@ int	ft_printf(const char *s, ...)
 	va_end(argument);
 	return (len_print);
 }
-
-/*
 #include <stdio.h>
 int	main()
 {
 	char	c = 'c';
+	char	s = 0;
+	char	v = '\0';
 	char	*str = "Hello you";
 	char	*ptr = "po";
 	int	i = -2147483648;
@@ -73,51 +73,84 @@ int	main()
 	unsigned int u = 285236;
 	int	low = 4660;
 	int	upp = 45698123;
+	unsigned int	m = 4294967296;
 
-
-	ft_printf("Print a char with MY function printf : %c\n", c);
-	printf("Prints a char with Printf : %c\n", c);
-
-	printf("--------------------------------------------------\n");
-
-	ft_printf("Prints a string with MY function printf : %s\n", str);
-	printf("Prints a string with Printf : %s\n", str);
+	ft_printf("Test 1 :\n");
+	ft_printf("size ft_printf : %d\n",ft_printf("Print a char :%c\n", c));
+	printf("size Printf : %d\n", printf("Print a char :%c\n", c));
 
 	printf("\n\n");
 
-	ft_printf("Prints a pointer with MY function printf : %p\n", ptr);
-	printf("Prints a pointer with Printf : %p\n", ptr);
+	ft_printf("Test 2 :\n");
+	ft_printf("size ft_printf : %d\n",ft_printf("Print a string : %s\n", str));
+	printf("size Printf : %d\n",printf("Print a string : %s\n", str));
 
 	printf("\n\n");
 
-	ft_printf("Prints dec num with MY printf : %d %d %d\n", i, imax, zero);
-	printf("Prints a dec number with Printf : %d %d %d\n", i, imax, zero);
+	ft_printf("Test 3 :\n");
+	ft_printf("size ft_printf : %d\n",ft_printf("Print a pointer : %p\n", ptr));
+	printf("size Printf : %d\n",printf("Print a pointer : %p\n", ptr));
 
 	printf("\n\n");
 
-	ft_printf("Prints int(base 10) with MY printf : %i %i %i\n", i, imax, zero);
-	printf("Prints an integer(base 10) with Printf : %i %i %i\n", i, imax, zero);
+	ft_printf("Test 4 :\n");
+	ft_printf("size ft_printf : %d\n",ft_printf("Prints decimal numbers : %d %d %d\n", i, imax, zero));
+	printf("size Printf : %d\n",printf("Prints decimal numbers : %d %d %d\n", i, imax, zero));
 
 	printf("\n\n");
 
-	ft_printf("Prints an uns deci number with MY function printf : %u\n", u);
-	printf("Prints an unsigned decimal number with Printf : %u\n", u);
+	ft_printf("Test 5 :\n");
+	ft_printf("size ft_printf : %d\n",ft_printf("Prints int(base 10) : %i %i %i\n", i, imax, zero));
+	printf("size Printf : %d\n",printf("Prints int(base 10) : %i %i %i\n", i, imax, zero));
 
 	printf("\n\n");
 
-	ft_printf("Prints a number in Hexa lowercase with MY printf : %x\n", low);
-	printf("Prints a number in Hexa lowercase with Printf : %x\n", low);
+	ft_printf("Test 6 :\n");
+	ft_printf("size ft_printf : %d\n",ft_printf("Prints an unsigned decimal number : %u\n", u));
+	printf("size Printf : %d\n",printf("Prints an unsigned decimal number : %u\n", u));
 
 	printf("\n\n");
 
-	ft_printf("Prints a number in Hexa uppercase with MY printf : %X\n", upp);
-	printf("Prints a number in Hexa uppercase with Printf : %X\n", upp);
+	ft_printf("Test 7 :\n");
+	ft_printf("size ft_printf : %d\n",ft_printf("Prints a number in Hexa lowercase : %x\n", low));
+	printf("size Printf : %d\n",printf("Prints a number in Hexa lowercase : %x\n", low));
 
 	printf("\n\n");
 
-	ft_printf("Prints a percent sign with MY printf : %%\n");
-	printf("Prints a percent sign with Printf : %%\n");
+	ft_printf("Test 8 :\n");
+	ft_printf("size ft_printf : %d\n",ft_printf("Prints a number in Hexa uppercase : %X\n", upp));
+	printf("size Printf : %d\n",printf("Prints a number in Hexa uppercase : %X\n", upp));
+
+	printf("\n\n");
+
+	ft_printf("Test 9 :\n");
+	ft_printf("size ft_printf : %d\n",ft_printf("Prints a percent sign : %%\n"));
+	printf("size Printf : %d\n",printf("Prints a percent sign : %%\n"));
+
+	printf("\n\n");
+
+	ft_printf("Test 10 :\n");
+	ft_printf("size ft_printf : %d\n",ft_printf("printf\n"));
+	printf("size Printf : %d\n",printf("Printf\n"));
+
+	printf("\n\n");
+
+	ft_printf("Test 11 :\n");
+	ft_printf("size ft_printf : %d\n",ft_printf("Prints 0 with string : %c\n", s));
+	printf("size Printf : %d\n",printf("Prints 0 with string : %c\n", s));
+
+	printf("\n\n");
+
+	ft_printf("Test 12 :\n");
+	ft_printf("size ft_printf : %d\n",ft_printf("Prints char null : %c\n", v));
+	printf("size Printf : %d\n",printf("Prints char null : %c\n", v));
+
+	printf("\n\n");
+
+	ft_printf("Test 12 :\n");
+	ft_printf("size ft_printf : %d\n",ft_printf("Print_f: %x\n", m));
+	printf("size Printf : %d\n",printf("Printf : %x\n", m));
+
+	printf("\n\n");
 	return (0);
 }
-
-*/
